@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500;700&family=Montserrat:wght@400;500;700&display=swap');
+
+/* font-family: 'Crimson Pro', serif; */
+/* font-family: 'Lora', serif; */
+/* font-family: 'Montserrat', sans-serif; */
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+ max-width: 1440px;   
+ background:#181719;
+ color: #fff;
+ font-family: 'Montserrat', sans-serif;
+ padding:2rem 1rem; 
+ margin: 0 auto;
+}
+
+h3 {
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    width: 70%;
+    padding-left: 1rem;
+    padding-bottom: 1rem ;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    
+}
+
+#logo {
+    font-family: 'Crimson Pro';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+    border: 1px solid white;
+    padding: 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.hamburger {
+    display: none; 
+    
+}
+
+.bar {
+    display: block;
+    width: 28.5px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    
+}
+
+.hamburger.active .bar:nth-child(2) /*SECOND/MIDDLE BAR */ {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    gap: 4rem;
+}
+
+nav ul li a{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding-bottom: .25rem;
+
+}
+
+nav ul li a:after {
+
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;   
+    /* content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.25s ease-out; */
+}
+
+nav ul li a:hover:after {
+    transform: scaleX(1);
+  transform-origin: bottom left;
+  /* color: green; */
+    /* text-decoration: underline; */
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid yellow; */
+    height: 100vh;
+    padding: 0 3em;
+}
+
+
+.main-right {
+    min-width: 821.11px;
+    /* height: 555px; */
+    position: relative;
+    margin-top:4em;
+    /* border: 3px solid blue; */
+    padding: 2.5rem;
+}
+
+.main-right img {
+    max-width: 100%;
+    
+}
+
+.main-right-card-profile-img{
+    max-width: 85px;
+    /* margin-right: 1em; */
+}
+
+.main-right-card-profile-img img {
+    border-radius: 50%;
+    width: 70%;
+}
+
+.main-left {
+    /* border: 2px solid pink; */
+    width:410px;
+    padding-top: 5em;
+}
+
+.main-left h1 {
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 61px;
+    margin-bottom: .8em;
+}
+
+.main-left h4 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 2em;
+}
+
+#read-more {
+    /* padding: 2em; */
+    display: flex;
+    align-items: center;
+    /* border: 1px solid brown; */
+    gap: 1em;
+    cursor: pointer;
+}
+
+#read-more p {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+#read-more i {
+    width: 50px;
+}
+
+.main-right-card {
+    /* border: 1px solid white; */
+    background: #181719;
+    max-width: 410px;
+    position: absolute;
+    top: 81%;
+    left: 41%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+}
+
+.main-right-card-profile {
+    /* border: 1px solid green; */
+    display: flex;
+    padding: 1rem;
+}
+
+footer {
+    margin-top: 128px;
+    /* border: 1px solid white; */
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #A9A9A9; 
+}
+
+footer a {
+
+    text-decoration: none;
+    font-weight: 700;
+    color: #A9A9A9; 
+
+}
+
+
+
+
+@media only screen and (max-width: 1250px) {
+    main {
+
+        grid-template-columns: repeat(1,1fr);
+        
+        /* border: 1px solid green; */
+    }
+
+    body {
+        min-width: 375px;
+        /* border: 1px solid orange; */
+        margin: 0 auto;
+    }
+
+
+    .main-left {
+        /* border: 2px solid red; */
+        min-width: 300px;
+
+   
+    }
+
+    .main-right {
+        min-width: 90%;
+        padding: 0;
+        margin-top:2em;
+    }
+
+    .main-right-card-profile {
+        width: 100%;
+    }
+    
+    .main-right-card-profile-img {
+        width: 100%;
+    }
+    
+    .main-right img {
+        max-width: 100%;
+        
+    }
+
+   
+  }
+
+  @media screen and (max-width:675px) {
+         
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        /* border: 2px solid yellow;  */
+        z-index: 100;
+        position:relative;
+        /* left: 85%; */
+
+    }
+
+    /* header {
+        position:sticky;
+        
+    } */
+
+    .menu {
+        position: fixed;
+        height: 100vh;
+        /* width: 100vh; */
+        left: -0%;
+        top: -100%;
+        gap: 0;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #181719;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s; 
+        z-index: 1;
+        /* border: 1px solid ghostwhite; */
+    }
+    
+    .menu li {
+        margin: 16px auto;
+        gap: 0;
+    }
+    
+    .menu.active {
+        top: 10%;
+    }
+
+    #logo.active {
+        color: #181719;
+        border: none;
+    }
+    
+    
+  }
+
+  @media screen and (max-width:540px) {
+
+    .main-right-card {
+        position: static;
+        width: 100%;
+    }
+
+
+}
